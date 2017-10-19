@@ -1,0 +1,10 @@
+{
+     "ext": "js json html css",
+     "watch": [
+       "server",
+       "config"
+     ],
+     "ignore": [
+       "server/debug"
+     ]
+}

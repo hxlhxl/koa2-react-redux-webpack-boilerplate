@@ -1,0 +1,83 @@
+.mj-message {
+  font-size: 12px;
+  position: fixed;
+  z-index: 1052;
+  width: 100%;
+  top: 30%;
+
+  &-notice {
+    width: auto;
+    vertical-align: middle;
+    position: absolute;
+    left: 50%;
+    margin-left:-100px;
+  }
+   &-notice-content :after {
+        display:inline-block;
+        width:0;
+        height:100%;
+        vertical-align:middle;
+        content:"";
+    }
+  &-notice-content {
+    position: relative;
+    border-radius: 2px;
+    padding: 0px 16px;
+    text-align: center;
+    font-size: 16px;
+    background: rgba(127,127,127,0.9);
+    display: block;
+    color: #fff;
+    box-shadow:0 8px 14px 0 rgba(0,0,0,0.14);
+    //border: 1px solid $lightgray;
+    //box-shadow: 0 0 6px $font;
+
+  }
+  .iconfont {
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  &-success .iconfont {
+    color: #fff;
+  }
+
+  &-error .iconfont {
+    color: #fff;
+  }
+
+  &-warning .iconfont {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  &-info .iconfont,
+  &-loading {
+    //color: #fff;
+    //font-size: 20px;
+    .mj-loading.positionType {
+      height: 72px;
+    }
+    .mj-loading.hasMsg {
+      background-color: transparent;
+      .content {
+        margin: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+        .msg {
+          color: #fff;
+          font-weight: normal;
+          margin-bottom: 0;
+          margin-left: 14px;
+        }
+
+        .msg s {
+          color: #fff;
+          padding: 0;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

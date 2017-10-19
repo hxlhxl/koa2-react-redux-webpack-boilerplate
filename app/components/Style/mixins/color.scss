@@ -1,0 +1,8 @@
+@mixin errorStyle {
+  border: 1px solid $mediumlightred;
+  background: $extralightred;
+}
+
+@mixin btnDisabledColor($fontcolor) {
+  color: rgba(red($fontcolor), green($fontcolor), blue($fontcolor), 0.4) !important;
+}

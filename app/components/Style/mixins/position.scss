@@ -1,0 +1,34 @@
+// mixins for position
+// ------------------------
+
+@mixin position($position,$top,$left){
+  position: $position;
+  left: $left;
+  top: $top;
+}
+
+@mixin position-all($position,$top,$right,$bottom,$left){
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin position-tr($position,$top,$right){
+  position: $position;
+  right: $right;
+  top: $top;
+}
+
+@mixin position-bl($position,$bottom,$left){
+  position: $position;
+  left: $left;
+  bottom: $bottom;
+}
+
+@mixin position-br($position,$bottom,$right){
+  position: $position;
+  right: $right;
+  bottom: $bottom;
+}

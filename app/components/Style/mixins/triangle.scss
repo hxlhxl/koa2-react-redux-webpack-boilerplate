@@ -1,0 +1,14 @@
+// mixins for triangle
+// ------------------------
+@mixin triangle($border-width,$side,$border-color){
+  display: inline-block;
+  @include size(0,0);
+  border:$border-width solid transparent;
+  border-#{$side}:$border-width solid $border-color;
+  transform-origin: center $border-width/2;
+  @include transition('transform ease .3s');
+
+  &.on {
+   @include transform('rotate(180deg)') ;
+  }
+}

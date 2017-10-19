@@ -1,0 +1,309 @@
+@import "./mixins/flex";
+.scroll-wrap {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.ant-select-dropdown {
+  border-radius: 2px;
+  .ant-select-dropdown-menu-item:hover,
+  .ant-select-dropdown-menu-item-active {
+    background-color:#f8f8f8;
+  }
+  .ant-select-dropdown-menu-item-disabled:hover {
+    background-color:#fff;
+    cursor: not-allowed;
+  }
+  .loading-suggestion {
+    height: 30px;
+    position: relative;
+    .content {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+
+/*region 样式分离 基本色值*/
+.baseDarkColor {
+  color: darken(rgba(0, 97, 243, 1),10%)!important;
+}
+.baseColor {
+  color: rgba(0, 97, 243, 1) !important;
+}
+.baseLightColor {
+  color: lighten(rgba(0, 97, 243, 1),20%) !important;
+}
+.baseHoverColor:hover {
+  color: rgba(0, 97, 243, 1) !important;
+}
+
+
+.bg-baseDarkColor {
+  background-color: darken(rgba(0, 97, 243, 1),10%) !important;
+}
+.bg-baseColor {
+  background-color: rgba(0, 97, 243, 1) !important;
+}
+.bg-baseLightColor {
+  background-color: lighten(rgba(0, 97, 243, 1),20%) !important;
+}
+.bg-baseOpacityColor{
+  background-color: rgba(0, 97, 243, 0.88) !important;
+}
+
+.bd-baseDarkColor {
+  border-color: darken(rgba(0, 97, 243, 1),10%) !important;
+}
+.bd-baseColor {
+  border-color: rgba(0, 97, 243, 1) !important;
+}
+.bd-baseLightColor {
+  border-color: lighten(rgba(0, 97, 243, 1),20%) !important;
+}
+
+.bg-discoColor{
+  background-color: rgba(46,199,250,1) !important;
+}
+.bg-orangeColor{
+  background-color: rgba(46,199,250, 1) !important;
+}
+.bd-orangeColor{
+  border-color: rgba(46,199,250, 1) !important;
+}
+
+.btn-normalWhite{
+  background-color:$white !important;
+  border: solid 1px $extradarkgray !important;
+  color:$darkfont !important;
+}
+.btn-hoverWhite{
+  background-color:$extralightgray !important;
+  border: solid 1px $extradarkgray !important;
+  color:$darkfont !important;
+}
+.btn-clickWhite{
+  background-color: #f3f3f3 !important;
+  border: solid 1px $extradarkgray !important;
+  color:$darkfont !important;
+}
+
+.btn-prohibit{
+  background-color:$extradarkgray !important;
+  color:$white !important;
+}
+
+.btn-normalGray{
+  background-color:$darkfont !important;
+  color:$white !important;
+}
+.btn-hoverGray{
+  background-color:lighten($darkfont,20%) !important;
+  color:$white !important;
+}
+.btn-clickGray{
+  background-color:darken($darkfont,20%) !important;
+  color:$white !important;
+}
+
+.btn-normalBlue{
+  background-color:$brightblue !important;
+  color:$white !important;
+}
+.btn-hoverBlue{
+  background-color:lighten($brightblue,20%) !important;
+  color:$white !important;
+}
+.btn-clickBlue{
+  background-color:darken($brightblue,20%) !important;
+  color:$white !important;
+}
+.icon-toDark{
+  font-size:10px !important;
+  color:$smoke !important;
+}
+.icon-toDark:hover{
+  color:darken($smoke,20%) !important;
+}
+.icon-toLight{
+  color:$white;
+  opacity:0.8;
+}
+.icon-toLight:hover{
+  opacity:1;
+}
+
+/*endregion 样式分离 基本色值
+*/
+
+
+p {
+  color: $extradarkfont;
+}
+
+small {
+  font-size: $font-size-12;
+  color: $mediumfont;
+}
+
+.iconfont {
+  cursor: default;
+}
+
+.blue {
+  color: $brightblue;
+}
+
+.red {
+  color: $redfont;
+}
+
+.green {
+  color: $green;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.alignR {
+  text-align: right;
+}
+
+.alignC {
+  text-align: center;
+}
+
+.hide {
+  display: none !important;
+}
+
+.rotate .icon-wrap {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+
+// over-hide
+.over-hide {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.twoline-hide {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-inline-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+// vcenter 内部需居中 元素
+.vcen-in {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.center {
+  @include flexbox;
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+.hcenter {
+  @include flexbox;
+  @include justify-content(center);
+}
+
+.hright {
+  @include flexbox;
+  @include justify-content(flex-end);
+}
+
+.vcenter {
+  @include flexbox;
+  @include align-items(center);
+}
+
+.vtop {
+  @include flexbox;
+  @include align-items(flex-start);
+}
+
+.vbottom {
+  @include flexbox;
+  @include align-items(flex-end);
+}
+
+.space-between {
+  @include flexbox;
+  @include justify-content(space-between);
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1; /*IE/7/6*/
+}
+
+.error-border {
+  border: 1px solid $mediumlightred !important;
+
+/*   color: $redfont !important;
+input::-webkit-input-placeholder, .input-left, .input-right {
+  color: $redfont !important;
+}
+box-shadow: 0 0 0 2px rgba(255, 24, 71, 0.2); */
+}
+.ant-select-dropdown-menu-item-disabled:hover {
+  cursor: initial;
+}
+
+.default{
+  cursor:default !important;
+}
+
+.pointer{
+  cursor:pointer !important;
+}
+
+.move{
+  cursor:move !important;
+}
+
+.tooltip-inner{
+  max-width:282px;
+}

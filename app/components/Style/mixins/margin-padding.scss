@@ -1,0 +1,78 @@
+// mixins for margin padding
+//margin-all 四个值统一
+//margin 参数:上右下左
+//margin-tb margin-lr
+//margin-tl margin-tr margin-bl margin-br
+// ------------------------
+
+// margin
+@mixin margin-all($margin){
+  margin: $margin;
+}
+@mixin margin($mt, $mr, $mb, $ml) {
+  margin-top: $mt;
+  margin-right: $mr;
+  margin-bottom: $mb;
+  margin-left: $ml;
+}
+@mixin margin-lr($ml, $mr) {
+  margin-right: $mr;
+  margin-left: $ml;
+}
+@mixin margin-tb($mt, $mb) {
+  margin-top: $mt;
+  margin-bottom: $mb;
+}
+
+@mixin margin-tl($mt, $mr) {
+  margin-top: $mt;
+  margin-left: $ml;
+}
+@mixin margin-tr($mt, $mr) {
+  margin-top: $mt;
+  margin-right: $mr;
+}
+@mixin margin-bl($mb, $ml) {
+  margin-bottom: $mb;
+  margin-left: $ml;
+}
+@mixin margin-br($mb, $mr) {
+  margin-bottom: $mb;
+  margin-right: $mr;
+}
+
+// padding
+@mixin padding-all($padding){
+  padding: $padding;
+}
+@mixin padding($pt, $pr, $pb, $pl) {
+  padding-top: $pt;
+  padding-right: $pr;
+  padding-bottom: $pb;
+  padding-left: $pl;
+}
+
+@mixin padding-lr($pl, $pr) {
+  padding-right: $pr;
+  padding-left: $pl;
+}
+@mixin padding-tb($pt, $pb) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+}
+@mixin padding-tl($pt, $pr) {
+  padding-top: $pt;
+  padding-left: $pl;
+}
+@mixin padding-tr($pt, $pr) {
+  padding-top: $pt;
+  padding-right: $pr;
+}
+@mixin padding-bl($pb, $pl) {
+  padding-bottom: $pb;
+  padding-left: $pl;
+}
+@mixin padding-br($pb, $pr) {
+  padding-bottom: $pb;
+  padding-right: $pr;
+}

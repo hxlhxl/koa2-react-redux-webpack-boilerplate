@@ -1,0 +1,19 @@
+// mixins for css3 animate
+// ------------------------
+@mixin css3-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+@mixin animation($properties) {
+  @include css3-prefix('animation', $properties);
+}
+@mixin transition($properties) {
+  @include css3-prefix('transition', $properties);
+}
+@mixin transform($properties) {
+  @include css3-prefix('transform', $properties);
+}
