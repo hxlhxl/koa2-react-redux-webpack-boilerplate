@@ -97,7 +97,6 @@
     "mocha": "^3.4.2",
     "moment": "^2.18.1",
     "monaco-editor": "^0.8.3",
-    "node-sass": "^4.5.3",
     "nodemon": "^1.11.0",
     "pingpp-js": "^2.1.8",
     "prop-types": "^15.5.10",

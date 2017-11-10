@@ -35,4 +35,4 @@ app.listen(port);
 if (module.hot) {
   module.hot.accept()
 }
-console.log('koa server started at port 3000');
+console.log('koa server started at port',port);
